@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zSw22kDOPHAbUY9psmMOXuvgSGr0jyKG8c1+1V6DraHX50RW8HNkpgo0xTrH7CHLBjpil6YyR+5qcLWK3UF8lw==",
+  "dgSpecHash": "v9CD5VJuM29dhq0EUuy/aS0z47Lrfnj+c5zuaPo1HTobQsKX9XK4WcYLyYzL9YdvAgb7b9G+wGVjbspemmOESg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\1\\ado\\AppRoot\\AppRoot.csproj",
+  "projectFilePath": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\labo01\\ado\\AppRoot\\AppRoot.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\siebe\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
     "C:\\Users\\siebe\\.nuget\\packages\\k4os.compression.lz4\\1.2.6\\k4os.compression.lz4.1.2.6.nupkg.sha512",

@@ -18,7 +18,9 @@ namespace PresentationLayer
             var coachMembers = Attendance.GetMembers("Coaches");
             var swimmersMembers = Attendance.GetMembers("Swimmers");
             coaches = coachMembers.Select(m => (Coach)m).ToList();
+            coachMembers.Sort();
             swimmers = swimmersMembers.Select(m => (Swimmer)m).ToList();
+            swimmersMembers.Sort();
             FillComboBox(comboBoxCoaches, coachMembers);
             FillComboBox(comboBoxSwimmers, swimmersMembers);
         }

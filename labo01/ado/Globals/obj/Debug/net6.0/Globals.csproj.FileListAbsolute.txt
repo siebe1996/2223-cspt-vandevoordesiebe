@@ -10,3 +10,15 @@ C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossing
 C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\1\ado\Globals\obj\Debug\net6.0\refint\Globals.dll
 C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\1\ado\Globals\obj\Debug\net6.0\Globals.pdb
 C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\1\ado\Globals\obj\Debug\net6.0\ref\Globals.dll
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo01\ado\Globals\bin\Debug\net6.0\Globals.deps.json
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo01\ado\Globals\bin\Debug\net6.0\Globals.dll
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo01\ado\Globals\bin\Debug\net6.0\Globals.pdb
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo01\ado\Globals\obj\Debug\net6.0\Globals.csproj.AssemblyReference.cache
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo01\ado\Globals\obj\Debug\net6.0\Globals.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo01\ado\Globals\obj\Debug\net6.0\Globals.AssemblyInfoInputs.cache
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo01\ado\Globals\obj\Debug\net6.0\Globals.AssemblyInfo.cs
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo01\ado\Globals\obj\Debug\net6.0\Globals.csproj.CoreCompileInputs.cache
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo01\ado\Globals\obj\Debug\net6.0\Globals.dll
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo01\ado\Globals\obj\Debug\net6.0\refint\Globals.dll
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo01\ado\Globals\obj\Debug\net6.0\Globals.pdb
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo01\ado\Globals\obj\Debug\net6.0\ref\Globals.dll

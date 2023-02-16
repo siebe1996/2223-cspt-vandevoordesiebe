@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9kq/3fUpcKmqUKUBU90tz92ktT30OKRbCQtFfXJE5slpuYHHPr6YJqY0r9Ly3Pd3CD7dLBghgdCn5enBegESCg==",
+  "dgSpecHash": "Lb6rv7cLCjEEKzKgc1TCT3YJxYQ1A6xzkeSImcVA4m1JJrKe8IUgrE6VVgkEkRcw9CaQYmD6LPT4NAN+1Ut4+Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\1\\dapper\\DataAccessLayer\\DataAccessLayer.csproj",
+  "projectFilePath": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\labo01\\dapper\\DataAccessLayer\\DataAccessLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\siebe\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\siebe\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",

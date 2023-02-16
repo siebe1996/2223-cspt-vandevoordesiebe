@@ -1594,11 +1594,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\1\\ado\\PresentationLayer\\PresentationLayer.csproj",
+      "projectUniqueName": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\labo01\\ado\\PresentationLayer\\PresentationLayer.csproj",
       "projectName": "PresentationLayer",
-      "projectPath": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\1\\ado\\PresentationLayer\\PresentationLayer.csproj",
+      "projectPath": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\labo01\\ado\\PresentationLayer\\PresentationLayer.csproj",
       "packagesPath": "C:\\Users\\siebe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\1\\ado\\PresentationLayer\\obj\\",
+      "outputPath": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\labo01\\ado\\PresentationLayer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1619,11 +1619,11 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\1\\ado\\Globals\\Globals.csproj": {
-              "projectPath": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\1\\ado\\Globals\\Globals.csproj"
+            "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\labo01\\ado\\Globals\\Globals.csproj": {
+              "projectPath": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\labo01\\ado\\Globals\\Globals.csproj"
             },
-            "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\1\\ado\\LogicLayer\\LogicLayer.csproj": {
-              "projectPath": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\1\\ado\\LogicLayer\\LogicLayer.csproj"
+            "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\labo01\\ado\\LogicLayer\\LogicLayer.csproj": {
+              "projectPath": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\labo01\\ado\\LogicLayer\\LogicLayer.csproj"
             }
           }
         }

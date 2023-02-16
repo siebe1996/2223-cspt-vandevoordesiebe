@@ -49,11 +49,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\1\\dapper\\Globals\\Globals.csproj",
+      "projectUniqueName": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\labo01\\dapper\\Globals\\Globals.csproj",
       "projectName": "Globals",
-      "projectPath": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\1\\dapper\\Globals\\Globals.csproj",
+      "projectPath": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\labo01\\dapper\\Globals\\Globals.csproj",
       "packagesPath": "C:\\Users\\siebe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\1\\dapper\\Globals\\obj\\",
+      "outputPath": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\labo01\\dapper\\Globals\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

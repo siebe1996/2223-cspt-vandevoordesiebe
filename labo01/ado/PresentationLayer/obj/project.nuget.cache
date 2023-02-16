@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "q8gK3HXBrH5/D769wIDy33E6JIqz4jN7Ab6QjipGEdOWe2+whzkIHhoiKoVwAN3WxUl7Ykg3KSQhhobOuFCrkw==",
+  "dgSpecHash": "cnmHR8VyKFuSXM+r7GldWHbH04Slf+QiBdu8CRMUBdOCKEmcwYet1A8bPbvJzGDenbsbVpSgu8NCLSzR8yIhcw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\1\\ado\\PresentationLayer\\PresentationLayer.csproj",
+  "projectFilePath": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\labo01\\ado\\PresentationLayer\\PresentationLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\siebe\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
     "C:\\Users\\siebe\\.nuget\\packages\\k4os.compression.lz4\\1.2.6\\k4os.compression.lz4.1.2.6.nupkg.sha512",

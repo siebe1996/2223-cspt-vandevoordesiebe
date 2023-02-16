@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xqjTL5O+/okFqBMC68gV2KIK0YWUv3w5ccrrZqaxFk53jZkSJQukHklvZJK0q42K4bmqjswtXj+rFF4Ja3kaMw==",
+  "dgSpecHash": "SXKbMMNR0SJ15+K0djz5vNMl5gM2aAyVxhGr/uO3vomkkp3sOfe/gwfNDiLXb7UqLekwuRr3qzZe3yyM0XnDlg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\1\\dapper\\AppRoot\\AppRoot.csproj",
+  "projectFilePath": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\labo01\\dapper\\AppRoot\\AppRoot.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\siebe\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\siebe\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",

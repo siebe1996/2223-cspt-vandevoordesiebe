@@ -1656,11 +1656,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\1\\dapper\\AppRoot\\AppRoot.csproj",
+      "projectUniqueName": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\labo01\\dapper\\AppRoot\\AppRoot.csproj",
       "projectName": "AppRoot",
-      "projectPath": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\1\\dapper\\AppRoot\\AppRoot.csproj",
+      "projectPath": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\labo01\\dapper\\AppRoot\\AppRoot.csproj",
       "packagesPath": "C:\\Users\\siebe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\1\\dapper\\AppRoot\\obj\\",
+      "outputPath": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\labo01\\dapper\\AppRoot\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1681,17 +1681,17 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\1\\dapper\\DataAccessLayer\\DataAccessLayer.csproj": {
-              "projectPath": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\1\\dapper\\DataAccessLayer\\DataAccessLayer.csproj"
+            "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\labo01\\dapper\\DataAccessLayer\\DataAccessLayer.csproj": {
+              "projectPath": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\labo01\\dapper\\DataAccessLayer\\DataAccessLayer.csproj"
             },
-            "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\1\\dapper\\Globals\\Globals.csproj": {
-              "projectPath": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\1\\dapper\\Globals\\Globals.csproj"
+            "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\labo01\\dapper\\Globals\\Globals.csproj": {
+              "projectPath": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\labo01\\dapper\\Globals\\Globals.csproj"
             },
-            "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\1\\dapper\\LogicLayer\\LogicLayer.csproj": {
-              "projectPath": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\1\\dapper\\LogicLayer\\LogicLayer.csproj"
+            "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\labo01\\dapper\\LogicLayer\\LogicLayer.csproj": {
+              "projectPath": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\labo01\\dapper\\LogicLayer\\LogicLayer.csproj"
             },
-            "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\1\\dapper\\PresentationLayer\\PresentationLayer.csproj": {
-              "projectPath": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\1\\dapper\\PresentationLayer\\PresentationLayer.csproj"
+            "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\labo01\\dapper\\PresentationLayer\\PresentationLayer.csproj": {
+              "projectPath": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\labo01\\dapper\\PresentationLayer\\PresentationLayer.csproj"
             }
           }
         }

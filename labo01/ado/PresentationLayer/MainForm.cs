@@ -17,7 +17,9 @@ namespace PresentationLayer
             var coachMembers = Attendance.GetMembers("Coaches");
             var swimmersMembers = Attendance.GetMembers("Swimmers");
             coaches = coachMembers.Select(m => (Coach)m).ToList();
+            coachMembers.Sort();
             swimmers = swimmersMembers.Select(m => (Swimmer)m).ToList();
+            swimmersMembers.Sort();
             FillComboBox(comboBoxCoaches, coachMembers);
             FillComboBox(comboBoxSwimmers, swimmersMembers);
         }
@@ -35,6 +37,7 @@ namespace PresentationLayer
             listBoxCoaches.Items.Clear ();
             int id = comboBoxCoaches.SelectedIndex;
             List<Workout> workouts = coaches[id].Workouts;
+            workouts.Sort();
             foreach (Workout workout in workouts)
             {
                 listBoxCoaches.Items.Add(workout.ToString());
@@ -46,6 +49,7 @@ namespace PresentationLayer
             listBoxSwimmers.Items.Clear();
             int id = comboBoxSwimmers.SelectedIndex;
             List<Workout> workouts = swimmers[id].Workouts;
+            workouts.Sort();
             foreach (Workout workout in workouts)
             {
                 listBoxSwimmers.Items.Add(workout.ToString());

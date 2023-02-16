@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jH1gh8NBcWhf/VLo4pWQ7fkOlRDS6x20+4VL2uUZZ6m5DK25nHSWkZLSQnNf1x8J8mCcDmlqj/lRFPC6dAhHQg==",
+  "dgSpecHash": "bIAjELLvyyXM+BB2rpHzWbRN1zU4sh9TB8CSiIwVcG9eWTdquk8iMpnRkHCnBhMdSfcqKhPW4au4p82hN4PHOA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\1\\dapper\\LogicLayer\\LogicLayer.csproj",
+  "projectFilePath": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\labo01\\dapper\\LogicLayer\\LogicLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\siebe\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\siebe\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",

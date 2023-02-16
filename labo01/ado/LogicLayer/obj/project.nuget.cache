@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "91PIH9J1CCITvBf4ukmqmdiIhIwlchQrd7SfLWfJVi1FEHa7SBnA5aZ6gku38jUcXO6yJB90eb9tm6FKGqJKrQ==",
+  "dgSpecHash": "mGMBLw0HjwBMl7ElzYDHzGRVXkbM4OMVLUd8BgbEUa9GhG/577i5k4sn1B+cJbA6Cjr1rJGjMwIlD7ceVijn3Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\1\\ado\\LogicLayer\\LogicLayer.csproj",
+  "projectFilePath": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\labo01\\ado\\LogicLayer\\LogicLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\siebe\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
     "C:\\Users\\siebe\\.nuget\\packages\\k4os.compression.lz4\\1.2.6\\k4os.compression.lz4.1.2.6.nupkg.sha512",
