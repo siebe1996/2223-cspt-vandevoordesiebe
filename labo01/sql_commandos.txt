@@ -1,0 +1,8 @@
+
+insert into mydb.members values (1, "1998-01-23 12:45:56", "Test", "TestF","M"),(2, "1998-01-23 12:45:56", "Frand", "FrandF","M"),(3, "1998-01-23 12:45:56", "bob", "bobF","F"),(4, "1998-01-23 12:45:56", "Pop", "PopF","F");
+insert into mydb.coaches values (1,  "INITIATOR"), (2, "INSTRUCTOR");
+insert into mydb.swimmers values (3,  "8"), (4, "9");
+insert into mydb.swimming_pool values (1,  "gent", "_25", "rooiegem", "rooiegemlaan", 9000), (2,  "gent", "_25", "strop", "stroplaan", 9000), (3, "gent", "_25", "odipool", "gebroeders demetstraat", 9000);
+insert into mydb.workouts values (1, 1, 90, "1998-01-23 12:45:56", 1, "ENDURANCE"), (2, 2, 90, "1998-01-23 12:45:56", 2, "POWER"), (3, 1, 90, "1998-01-23 12:45:56", 3, "INTERVAL")
+insert into mydb.swimmers_workouts values (3, 1), (4, 1), (4, 2);
+

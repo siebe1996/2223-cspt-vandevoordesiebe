@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "kUEuZZUh1NjI6aEeXOQoRG+9NGT6wnWF/RjV/hivlmAWvOkGk31vTedfXuvwrvC+kjg1Z8Y6GfdFW5sX5unznw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\1\\dapper\\Globals\\Globals.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\siebe\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512"
+  ],
+  "logs": []
+}
