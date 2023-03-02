@@ -15,12 +15,6 @@ namespace Globals.Entities
         public int FinaPoints { get; set; }
         public virtual List<Workout> Workouts { get { return _workouts; } set { _workouts = value; } }
 
-        /*public Swimmer(SwimmerModel swimmer) : base(swimmer.DateOfBirth, swimmer.FirstName, swimmer.LastName, swimmer.Gender, swimmer.Id)
-        {
-            this.FinaPoints = swimmer.FinaPoints;
-            this.Workouts = new List<Workout>(swimmer.Workouts.Select(w => new Workout(w)));
-        }*/
-
         public Swimmer() { }
 
         public Swimmer(DateTime dateOfBirth, string firstName, string lastName, char gender, int finaPoints) : base(dateOfBirth, firstName, lastName, gender)

@@ -1,5 +1,4 @@
-﻿//using DataAccessLayer.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,16 +15,6 @@ namespace Globals.Entities
         public virtual List<Swimmer> Swimmers { get; set; } = new List<Swimmer>();
         public virtual SwimmingPool SwimmingPool { get; set; }
         public WorkoutType Type { get; set; }
-
-        /*public Workout(WorkoutModel workout)
-        {
-            //Coach = new Coach(workout.Coach); cirkel code
-            Duration = workout.Duration;
-            Id = workout.Id;
-            Schedule = workout.Schedule;
-            SwimmingPool = new SwimmingPool(workout.SwimmingPool);
-            WorkoutType Type = (WorkoutType)workout.Type;
-        }*/
 
         public Workout()
         {

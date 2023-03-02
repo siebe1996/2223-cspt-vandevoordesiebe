@@ -39,18 +39,10 @@ namespace DataAccessLayer
                 new Coach(DateTime.Parse("1998-01-23 12:45:56"), "Nel", "De Snel", 'F', (CoachLevel)Enum.Parse(typeof(CoachLevel), "TRAINER_A")),
                 new Coach(DateTime.Parse("1998-01-23 12:45:56"), "Piet", "De Miet", 'X', (CoachLevel)Enum.Parse(typeof(CoachLevel), "TRAINER_B")),
             };
-            //coaches.Select(c => repoCoaches.Add(c));
             foreach (Coach coach in coaches)
             {
                 repoCoaches.Add(coach);
-            }/*
-            if (repoCoaches.Find(c => c.Id == 1) == null)
-            {
-                foreach (Coach coach in coaches)
-                {
-                    repoCoaches.Add(coach);
-                }
-            }*/
+            }
         }
 
         public void CreateSwimmers()
@@ -74,15 +66,6 @@ namespace DataAccessLayer
             {
                 repoSwimmers.Add(swimmer);
             }
-
-            /*
-            if (repoSwimmers.Find(s => s.Id == 1) == null)
-            {
-                foreach (Swimmer swimmer in swimmers)
-                {
-                    repoSwimmers.Add(swimmer);
-                }
-            }*/
         }
 
         public void CreateWorkouts()
@@ -97,43 +80,15 @@ namespace DataAccessLayer
                 new Workout(65, DateTime.Parse("2020-01-23 12:45:56"), repoSwimmingPools.Get(3), (WorkoutType)Enum.Parse(typeof(WorkoutType), "POWER")),
             }.ToList();
 
-            //var coaches = (List<Coach>)repoCoaches.GetAll();
-            //var coach = coaches[0];
-            //var name = coach.FirstName;
-            //coach.Workouts.Add(workouts[0]);
-            /*var workout = workouts[0];
-
             var coaches = GetCoaches();
+            coaches[0].Workouts.Add(workouts[0]);
+            coaches[1].Workouts.Add(workouts[1]);
+            coaches[1].Workouts.Add(workouts[2]);
+            coaches[2].Workouts.Add(workouts[3]);
+            coaches[2].Workouts.Add(workouts[4]);
+            coaches[3].Workouts.Add(workouts[5]);
 
-            coaches[0].Workouts.Add(workout);
-            coaches[1].Workouts.Add((Workout)workouts[1]);
-            coaches[1].Workouts.Add((Workout)workouts[2]);
-            coaches[2].Workouts.Add((Workout)workouts[3]);
-            coaches[2].Workouts.Add((Workout)workouts[4]);
-            coaches[3].Workouts.Add((Workout)workouts[5]);*/
-            /*.Get(1).Workouts.Add((Workout)workouts[0]);
-            repoCoaches.Get(2).Workouts.Add((Workout)workouts[1]);
-            repoCoaches.Get(2).Workouts.Add((Workout)workouts[2]);
-            repoCoaches.Get(3).Workouts.Add((Workout)workouts[3]);
-            repoCoaches.Get(3).Workouts.Add((Workout)workouts[4]);
-            repoCoaches.Get(4).Workouts.Add((Workout)workouts[5]);*/
-
-            /*foreach (Workout workout in workouts)
-            {
-                repoWorkouts.Add(workout);
-            }*/
-            if (true)
-            {
-                var coaches = GetCoaches();
-                coaches[0].Workouts.Add(workouts[0]);
-                coaches[1].Workouts.Add(workouts[1]);
-                coaches[1].Workouts.Add(workouts[2]);
-                coaches[2].Workouts.Add(workouts[3]);
-                coaches[2].Workouts.Add(workouts[4]);
-                coaches[3].Workouts.Add(workouts[5]);
-
-                repoWorkouts.Add(workouts);
-            }
+            repoWorkouts.Add(workouts);
         }
 
         public void CreateSwimmingPool()
@@ -148,13 +103,6 @@ namespace DataAccessLayer
             {
                 repoSwimmingPools.Add(swimmingPool);
             }
-            /*if (repoSwimmingPools.Find(sp => sp.Id == 1) == null)
-            {
-                foreach (SwimmingPool swimmingPool in swimmingPools)
-                {
-                    repoSwimmingPools.Add(swimmingPool);
-                }
-            }*/
         }
 
         public List<Coach> GetCoaches()
@@ -223,7 +171,6 @@ namespace DataAccessLayer
 
         public void AddWorkout(Workout workout, Coach coach)
         {
-            //var coach = GetCoach(workout.Coach.Id);
             coach.Workouts.Add(workout);
             repoWorkouts.Add(workout);
         }

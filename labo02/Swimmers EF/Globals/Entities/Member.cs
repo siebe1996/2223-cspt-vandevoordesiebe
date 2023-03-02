@@ -1,5 +1,4 @@
-﻿//using DataAccessLayer.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,14 +14,6 @@ namespace Globals.Entities
         public char Gender { get; set; }
         public int Id { get; set; }
 
-        /*public Member(MemberModel member)
-        {
-            DateOfBirth = member.DateOfBirth;
-            FirstName = member.FirstName;
-            LastName = member.LastName;
-            Gender = member.Gender;
-            Id = member.Id;
-        }*/
         public Member() { }
 
         public Member(DateTime dateOfBirth, string firstName, string lastName, char gender)

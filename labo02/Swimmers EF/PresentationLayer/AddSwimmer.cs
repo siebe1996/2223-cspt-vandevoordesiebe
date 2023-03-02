@@ -30,7 +30,6 @@ namespace PresentationLayer
 
         private void CancelSwimmer(object Sender, EventArgs e)
         {
-            //Swimmer.Workouts = _logic.GetWorkouts();
             this.Close();
         }
 
@@ -39,9 +38,7 @@ namespace PresentationLayer
             var swimmers = _logic.GetSwimmers();
             int index = comboBoxSwimmers.SelectedIndex;
             Workout.Swimmers.Add(swimmers[index]);
-            //_logic.AddWorkoutToSwimmerDb(Swimmer);
             WorkoutEdit.FillListBoxSwimmers();
-            //SwimmerEdit swimmerEdit = new SwimmerEdit(_logic, Swimmer, MainForm);
             this.Close();
         }
 

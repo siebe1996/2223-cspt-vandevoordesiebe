@@ -31,9 +31,7 @@ namespace PresentationLayer
 
         private void CancelEditWorkout(object Sender, EventArgs e)
         {
-            //Swimmer.Workouts = _logic.GetWorkouts(Swimmer);
             Workout.Swimmers = _logic.GetSwimmers(Workout);
-            //Workout = _logic.GetWorkout(Workout.Id);
             MainForm.Show();
             this.Close();
         }

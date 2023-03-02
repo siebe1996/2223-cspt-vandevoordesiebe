@@ -95,8 +95,6 @@ namespace PresentationLayer
         {
             int index = listBoxWorkouts.SelectedIndex;
             var workoutFromList = workouts[index];
-            //int id = workoutFromList.Id;
-            //var workout = _logic.GetWorkout(id); //ToDo make sure he gets workout from db
             WorkoutEdit workoutEdit = new WorkoutEdit(_logic, workoutFromList, this);
             workoutEdit.Show();
             this.Hide();

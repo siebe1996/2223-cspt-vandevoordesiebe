@@ -1,5 +1,4 @@
-﻿//using DataAccessLayer.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,16 +15,6 @@ namespace Globals.Entities
         public string Name { get; set; }
         public string Street { get; set; }
         public int ZipCode { get; set; }
-
-        /*public SwimmingPool(SwimmingPoolModel swimmingPool)
-        {
-            City = swimmingPool.City;
-            Id = swimmingPool.Id;
-            LaneLength = (PoolLaneLength)swimmingPool.LaneLength;
-            Name = swimmingPool.Name;
-            Street = swimmingPool.Street;
-            ZipCode = swimmingPool.ZipCode;
-        }*/
 
         public SwimmingPool(string city, PoolLaneLength laneLength, string name, string street, int zipCode)
         {
