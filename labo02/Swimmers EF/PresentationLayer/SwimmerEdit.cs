@@ -41,6 +41,7 @@ namespace PresentationLayer
             if (!_logic.CheckIfSwimmerExist(Swimmer))
             {
                 Swimmer newSwimmer = new Swimmer(Swimmer.DateOfBirth, Swimmer.FirstName, Swimmer.LastName, Swimmer.Gender, Swimmer.FinaPoints);
+                newSwimmer.Workouts = Swimmer.Workouts;
                 _logic.AddSwimmer(newSwimmer);
             }
             else

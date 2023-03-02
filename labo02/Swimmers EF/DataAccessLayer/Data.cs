@@ -166,6 +166,10 @@ namespace DataAccessLayer
 
         public void AddSwimmer(Swimmer swimmer)
         {
+            foreach (Workout workout in swimmer.Workouts)
+            {
+                workout.Swimmers.Add(swimmer);
+            }
             repoSwimmers.Add(swimmer);
         }
 
