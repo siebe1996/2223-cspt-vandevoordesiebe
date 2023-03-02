@@ -40,17 +40,23 @@ namespace PresentationLayer
         {
             if (!_logic.CheckIfWorkoutExist(Workout))
             {
-                Workout newWorkout = new Workout(Workout.Duration, Workout.Schedule, Workout.SwimmingPool, Workout.Type);
-                newWorkout.Swimmers = Workout.Swimmers;
-                _logic.AddWorkout(newWorkout, Workout.Coach);
+                if(Workout.Coach != null && Workout.SwimmingPool != null)
+                {
+                    Workout newWorkout = new Workout(Workout.Duration, Workout.Schedule, Workout.SwimmingPool, Workout.Type);
+                    newWorkout.Swimmers = Workout.Swimmers;
+                    _logic.AddWorkout(newWorkout, Workout.Coach);
+                    MainForm mainForm = new MainForm(_logic);
+                    mainForm.Show();
+                    this.Close();
+                }
             }
             else
             {
                 _logic.UpdateWorkout(Workout);
+                MainForm mainForm = new MainForm(_logic);
+                mainForm.Show();
+                this.Close();
             }
-            MainForm mainForm = new MainForm(_logic);
-            mainForm.Show();
-            this.Close();
         }
 
         public void FillListBoxSwimmers()
@@ -117,9 +123,11 @@ namespace PresentationLayer
         private void RemoveSwimmerFromWorkout(object Sender, EventArgs e)
         {
             int index = listBoxSwimmers.SelectedIndex;
-            Workout.Swimmers.RemoveAt(index);
-            FillListBoxSwimmers();
-            
+            if (index > 0)
+            {
+                Workout.Swimmers.RemoveAt(index);
+                FillListBoxSwimmers();
+            }
         }
 
         private void WorkoutEdit_Load(object sender, EventArgs e)

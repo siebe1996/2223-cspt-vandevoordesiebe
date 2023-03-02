@@ -26,6 +26,7 @@ namespace PresentationLayer
             {
                 comboBoxSwimmers.Items.Add(swimmer.ToString());
             }
+            comboBoxSwimmers.SelectedIndex = 0;
         }
 
         private void ComboBoxSwimmersSelectedIndexChanged(object sender, EventArgs e)
@@ -48,6 +49,7 @@ namespace PresentationLayer
             {
                 listBoxWorkouts.Items.Add(workout.ToString());
             }
+            listBoxWorkouts.SelectedIndex = 0;
         }
 
         private void AddWorkoutToSwimmer(object sender, EventArgs e)
