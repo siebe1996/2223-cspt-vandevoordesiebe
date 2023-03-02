@@ -35,6 +35,15 @@ namespace Globals.Entities
             Type = type;
         }
 
+        public Workout(Coach coach, int duration, DateTime schedule, SwimmingPool swimmingPool, WorkoutType type)
+        {
+            Coach = coach;
+            Duration = duration;
+            Schedule = schedule;
+            SwimmingPool = swimmingPool;
+            Type = type;
+        }
+
         public Workout(int duration, int id, DateTime schedule, WorkoutType type)
         {
             Duration = duration;

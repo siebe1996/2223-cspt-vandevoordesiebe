@@ -41,6 +41,7 @@ namespace PresentationLayer
             if (!_logic.CheckIfWorkoutExist(Workout))
             {
                 Workout newWorkout = new Workout(Workout.Duration, Workout.Schedule, Workout.SwimmingPool, Workout.Type);
+                newWorkout.Swimmers = Workout.Swimmers;
                 _logic.AddWorkout(newWorkout, Workout.Coach);
             }
             else
@@ -105,6 +106,10 @@ namespace PresentationLayer
 
         private void AddSwimmerToWorkout(object Sender, EventArgs e)
         {
+            if (!_logic.CheckIfWorkoutExist(Workout))
+            {
+                //Workout = new Workout(Workout.Coach, Workout.Duration, Workout.Schedule, Workout.SwimmingPool, Workout.Type);
+            }
             AddSwimmer addSwimmer = new AddSwimmer(_logic, Workout, this, MainForm);
             addSwimmer.ShowDialog();
         }
@@ -112,7 +117,6 @@ namespace PresentationLayer
         private void RemoveSwimmerFromWorkout(object Sender, EventArgs e)
         {
             int index = listBoxSwimmers.SelectedIndex;
-            //var swimmer = Workout.Swimmers[index];
             Workout.Swimmers.RemoveAt(index);
             FillListBoxSwimmers();
             
