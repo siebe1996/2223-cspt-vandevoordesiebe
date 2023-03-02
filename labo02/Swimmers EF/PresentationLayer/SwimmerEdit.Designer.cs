@@ -47,7 +47,14 @@ namespace PresentationLayer
             this.labelSwimmerName.Name = "labelSwimmerName";
             this.labelSwimmerName.Size = new System.Drawing.Size(0, 57);
             this.labelSwimmerName.TabIndex = 0;
-            this.labelSwimmerName.Text = this.Swimmer.ToString();
+            if (_logic.CheckIfSwimmerExist(Swimmer))
+            {
+                this.labelSwimmerName.Text = Swimmer.ToString();
+            }
+            else
+            {
+                this.labelSwimmerName.Text = "New Swimmer";
+            }
             // 
             // buttonCancel
             // 
@@ -104,14 +111,20 @@ namespace PresentationLayer
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.propertyGridSwimmer);
-            //this.Controls.Add(this.propertyGrid1);
             this.Controls.Add(this.buttonAddWorkoutToSwimmer);
             this.Controls.Add(this.listBoxWorkouts);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.labelSwimmerName);
             this.Name = "SwimmerEdit";
-            this.Text = "SwimmerEdit";
+            if (_logic.CheckIfSwimmerExist(Swimmer))
+            {
+                this.Text = "Swimmer "+Swimmer.ToString();
+            }
+            else
+            {
+                this.Text = "New Swimmer";
+            }
             this.Load += new System.EventHandler(this.SwimmerEdit_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -125,7 +138,6 @@ namespace PresentationLayer
         private Button buttonSave;
         private ListBox listBoxWorkouts;
         private Button buttonAddWorkoutToSwimmer;
-        //private PropertyGrid propertyGrid1;
         private PropertyGrid propertyGridSwimmer;
     }
 }

@@ -155,6 +155,14 @@ namespace PresentationLayer
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.buttonCancel);
             this.Name = "WorkoutEdit";
+            if (_logic.CheckIfWorkoutExist(Workout))
+            {
+                this.Text = "Workout " + Workout.ToString();
+            }
+            else
+            {
+                this.Text = "New Workout";
+            }
             this.Text = "SwimmerEdit";
             this.Load += new System.EventHandler(this.WorkoutEdit_Load);
             this.ResumeLayout(false);
