@@ -79,7 +79,7 @@ namespace DataAccessLayer
             };
             foreach (Coach coach in coaches)
             {
-                coach.Discriminator = "coachClass";
+                //coach.Discriminator = "coachClass";
                 repoCoaches.Add(coach);
             }
         }
@@ -103,7 +103,7 @@ namespace DataAccessLayer
 
             foreach (Swimmer swimmer in swimmers)
             {
-                swimmer.Discriminator = "swimmerClass";
+                //swimmer.Discriminator = "swimmerClass";
                 repoSwimmers.Add(swimmer);
             }
         }
@@ -165,6 +165,10 @@ namespace DataAccessLayer
 
         public bool CheckIfSwimmerExist(Swimmer swimmer)
         {
+            if(swimmer.Id == null)
+            {
+                return false;
+            }
             return repoSwimmers.Exists(s => s.Id == swimmer.Id);
         }
 
@@ -180,6 +184,10 @@ namespace DataAccessLayer
 
         public bool CheckIfWorkoutExist(Workout workout)
         {
+            if (workout.Id == null)
+            {
+                return false;
+            }
             return repoWorkouts.Exists(w => w.Id == workout.Id);
         }
 

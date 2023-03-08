@@ -27,6 +27,16 @@ namespace PresentationLayer
             Workouts = _logic.GetWorkouts(Swimmer);
             InitializeComponent();
             FillListBoxWorkouts();
+            if (_logic.CheckIfSwimmerExist(Swimmer))
+            {
+                this.labelSwimmerName.Text = Swimmer.ToString();
+                this.Text = "Swimmer " + Swimmer.ToString();
+            }
+            else
+            {
+                this.labelSwimmerName.Text = "New Swimmer";
+                this.Text = "New Swimmer";
+            }
         }
 
         private void CancelEditSwimmer(object Sender, EventArgs e)

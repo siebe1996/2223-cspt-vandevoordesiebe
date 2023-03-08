@@ -18,7 +18,7 @@ namespace Globals.Entities
         [BsonId(IdGenerator = typeof(StringObjectIdGenerator))]
         public string Id { get; set; }
         
-        public string Discriminator { get; set; }
+        //public string Discriminator { get; set; }
 
         public Member() { }
 

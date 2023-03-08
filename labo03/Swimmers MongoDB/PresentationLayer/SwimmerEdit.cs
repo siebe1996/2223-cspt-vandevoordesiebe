@@ -24,38 +24,29 @@ namespace PresentationLayer
             _logic = logic;
             Swimmer = swimmer;
             MainForm = mainform;
-            if (swimmer.Id == null)
-            {
-                Workouts = new List<Workout>();
-            }
-            else
-            {
-                Workouts = _logic.GetWorkouts(Swimmer);
-            }
             InitializeComponent();
-            FillListBoxWorkouts();
-            if (_logic.CheckIfSwimmerExist(Swimmer))
-            {
-                this.labelSwimmerName.Text = Swimmer.ToString();
-            }
-            else
-            {
-                this.labelSwimmerName.Text = "New Swimmer";
-            }
-            this.propertyGridSwimmer.SelectedObject = Swimmer;
             if (_logic.CheckIfSwimmerExist(Swimmer))
             {
                 this.Text = "Swimmer " + Swimmer.ToString();
+                this.labelSwimmerName.Text = Swimmer.ToString();
+                Workouts = _logic.GetWorkouts(Swimmer);
             }
             else
             {
                 this.Text = "New Swimmer";
+                this.labelSwimmerName.Text = "New Swimmer";
+                Workouts = new List<Workout>();
             }
+            FillListBoxWorkouts();
+            this.propertyGridSwimmer.SelectedObject = Swimmer;
         }
 
         private void CancelEditSwimmer(object Sender, EventArgs e)
         {
-            Swimmer.Workouts = _logic.GetWorkouts(Swimmer);
+            if (_logic.CheckIfSwimmerExist(Swimmer))
+            {
+                Swimmer.Workouts = _logic.GetWorkouts(Swimmer);
+            }
             MainForm.Show();
             this.Close();
         }

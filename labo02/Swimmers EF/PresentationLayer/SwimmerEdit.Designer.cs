@@ -47,14 +47,7 @@ namespace PresentationLayer
             this.labelSwimmerName.Name = "labelSwimmerName";
             this.labelSwimmerName.Size = new System.Drawing.Size(0, 57);
             this.labelSwimmerName.TabIndex = 0;
-            if (_logic.CheckIfSwimmerExist(Swimmer))
-            {
-                this.labelSwimmerName.Text = Swimmer.ToString();
-            }
-            else
-            {
-                this.labelSwimmerName.Text = "New Swimmer";
-            }
+            this.labelSwimmerName.Text = "New Swimmer";
             // 
             // buttonCancel
             // 
@@ -117,14 +110,7 @@ namespace PresentationLayer
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.labelSwimmerName);
             this.Name = "SwimmerEdit";
-            if (_logic.CheckIfSwimmerExist(Swimmer))
-            {
-                this.Text = "Swimmer "+Swimmer.ToString();
-            }
-            else
-            {
-                this.Text = "New Swimmer";
-            }
+            this.Text = "New Swimmer";
             this.Load += new System.EventHandler(this.SwimmerEdit_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

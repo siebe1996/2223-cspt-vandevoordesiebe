@@ -30,23 +30,15 @@ namespace PresentationLayer
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelSwimmerName = new System.Windows.Forms.Label();
+            Globals.Entities.Swimmer swimmer1 = new Globals.Entities.Swimmer();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SwimmerEdit));
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonSave = new System.Windows.Forms.Button();
             this.listBoxWorkouts = new System.Windows.Forms.ListBox();
             this.buttonAddWorkoutToSwimmer = new System.Windows.Forms.Button();
-            //this.propertyGrid1 = new System.Windows.Forms.PropertyGrid();
             this.propertyGridSwimmer = new System.Windows.Forms.PropertyGrid();
+            this.labelSwimmerName = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // labelSwimmerName
-            // 
-            this.labelSwimmerName.AutoSize = true;
-            this.labelSwimmerName.Font = new System.Drawing.Font("Segoe UI", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelSwimmerName.Location = new System.Drawing.Point(37, 34);
-            this.labelSwimmerName.Name = "labelSwimmerName";
-            this.labelSwimmerName.Size = new System.Drawing.Size(0, 57);
-            this.labelSwimmerName.TabIndex = 0;
             // 
             // buttonCancel
             // 
@@ -92,22 +84,37 @@ namespace PresentationLayer
             this.propertyGridSwimmer.AllowDrop = true;
             this.propertyGridSwimmer.Location = new System.Drawing.Point(23, 95);
             this.propertyGridSwimmer.Name = "propertyGridSwimmer";
-            this.propertyGridSwimmer.SelectedObject = new Swimmer();
+            swimmer1.DateOfBirth = new System.DateTime(((long)(0)));
+            swimmer1.FinaPoints = 0;
+            swimmer1.FirstName = null;
+            swimmer1.Gender = '\0';
+            swimmer1.Id = null;
+            swimmer1.LastName = null;
+            this.propertyGridSwimmer.SelectedObject = swimmer1;
             this.propertyGridSwimmer.Size = new System.Drawing.Size(299, 302);
             this.propertyGridSwimmer.TabIndex = 7;
-            this.propertyGridSwimmer.SelectedObject = Swimmer;
+            // 
+            // labelSwimmerName
+            // 
+            this.labelSwimmerName.AutoSize = true;
+            this.labelSwimmerName.Font = new System.Drawing.Font("Segoe UI", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelSwimmerName.Location = new System.Drawing.Point(24, 42);
+            this.labelSwimmerName.Name = "labelSwimmerName";
+            this.labelSwimmerName.Size = new System.Drawing.Size(311, 57);
+            this.labelSwimmerName.TabIndex = 8;
+            this.labelSwimmerName.Text = "New Swimmer";
             // 
             // SwimmerEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelSwimmerName);
             this.Controls.Add(this.propertyGridSwimmer);
             this.Controls.Add(this.buttonAddWorkoutToSwimmer);
             this.Controls.Add(this.listBoxWorkouts);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.buttonCancel);
-            this.Controls.Add(this.labelSwimmerName);
             this.Name = "SwimmerEdit";
             this.Load += new System.EventHandler(this.SwimmerEdit_Load);
             this.ResumeLayout(false);
@@ -123,5 +130,6 @@ namespace PresentationLayer
         private ListBox listBoxWorkouts;
         private Button buttonAddWorkoutToSwimmer;
         private PropertyGrid propertyGridSwimmer;
+        private Label label1;
     }
 }
