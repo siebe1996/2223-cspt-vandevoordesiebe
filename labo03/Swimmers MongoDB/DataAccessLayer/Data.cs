@@ -10,12 +10,6 @@ namespace DataAccessLayer
 {
     public class Data : IData
     {
-        //private SwimmingContext _context;
-        /*MongoClient client;
-        IMongoCollection<Swimmer> SwimmerCollection;
-        IMongoCollection<Coach> CoachCollection;
-        IMongoCollection<SwimmingPool> SwimmingPoolCollection;
-        IMongoCollection<Workout> WorkoutCollection;*/
         private MongoDbRepository<Swimmer> repoSwimmers;
         private MongoDbRepository<Coach> repoCoaches;
         private MongoDbRepository<SwimmingPool> repoSwimmingPools;
@@ -26,9 +20,6 @@ namespace DataAccessLayer
 
         public Data()
         {
-            string conn = "mongodb://localhost:27017";
-            string dbName = "swimmerMongoDB";
-
             BsonClassMap.RegisterClassMap<Coach>(cm => {
                 cm.AutoMap();
                 cm.SetDiscriminator("coachClass");
@@ -46,22 +37,21 @@ namespace DataAccessLayer
 
             //this._context = new SwimmingContext();
 
-            _client = new MongoClient(conn);
-            _db = _client.GetDatabase(dbName);
+            var settings = MongoClientSettings.FromConnectionString("mongodb+srv://root:Azerty123@cluster0.fsshs71.mongodb.net/?retryWrites=true&w=majority");
+            settings.ServerApi = new ServerApi(ServerApiVersion.V1);
+            _client = new MongoClient(settings);
+            _db = _client.GetDatabase("test");
 
-            //var CoachCollection = _db.GetCollection<Coach>("coaches");
-            //var Coachesrepo = new MongoDbRepository<Coach>(conn);
+            _db.DropCollection("Coach");
+            _db.DropCollection("Swimmingpool");
+            _db.DropCollection("Workout");
+            _db.DropCollection("Swimmer");
 
-            /*CoachCollection = _db.GetCollection<Coach>("coaches");
-            SwimmingPoolCollection = _db.GetCollection<SwimmingPool>("swimmingpools");
-            WorkoutCollection = _db.GetCollection<Workout>("workouts");
-            SwimmerCollection = _db.GetCollection<Swimmer>("swimmers");*/
-            
-            
-            repoCoaches = new MongoDbRepository<Coach>();
-            repoSwimmers = new MongoDbRepository<Swimmer>();
-            repoWorkouts = new MongoDbRepository<Workout>();
-            repoSwimmingPools = new MongoDbRepository<SwimmingPool>();
+            string atlasMongoDBConn = "mongodb+srv://root:Azerty123@cluster0.fsshs71.mongodb.net/test";
+            repoCoaches = new MongoDbRepository<Coach>(atlasMongoDBConn);
+            repoSwimmers = new MongoDbRepository<Swimmer>(atlasMongoDBConn);
+            repoWorkouts = new MongoDbRepository<Workout>(atlasMongoDBConn);
+            repoSwimmingPools = new MongoDbRepository<SwimmingPool>(atlasMongoDBConn);
 
             CreateSwimmingPool();
             CreateCoaches();
@@ -143,10 +133,6 @@ namespace DataAccessLayer
         {
             return (List<Coach>)repoCoaches.GetAll();
         }
-        public Coach GetCoach(int id)
-        {
-            return repoCoaches.Get(id.ToString());
-        }
 
         public List<SwimmingPool> GetSwimmingPools()
         {
@@ -201,33 +187,16 @@ namespace DataAccessLayer
             repoWorkouts.Update(workout);
         }
 
+        //doesnt work and not used
         public Workout GetWorkout(int id)
         {
             return repoWorkouts.Get(id.ToString());
-        }
-        public Workout GetWorkout(string id)
-        {
-            return repoWorkouts.Find(w => w.Id == id);
-        }
-
-        public SwimmingPool GetSwimmingPool(int id)
-        {
-            return repoSwimmingPools.Get(id.ToString());
-        }
-        public SwimmingPool GetSwimmingPool(string id)
-        {
-            return repoSwimmingPools.Get(id);
         }
 
         public void AddSwimmer(Swimmer swimmer)
          {
              repoSwimmers.Add(swimmer);
          }
-
-        public void AddWorkout(Workout workout, Coach coach)
-        {
-            repoWorkouts.Add(workout);
-        }
 
         public void AddWorkout(Workout workout)
         {
