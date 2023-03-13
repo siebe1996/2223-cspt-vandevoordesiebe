@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Globals.Entities
 {
-    [Table("Coaches")]
+    //[Table("Coaches")]
     public class Coach : Member
     {
         [Required]

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Globals.Entities
 {
-    [Table("Swimmers")]
+    //[Table("Swimmers")]
     public class Swimmer : Member
     {
         [Required]
