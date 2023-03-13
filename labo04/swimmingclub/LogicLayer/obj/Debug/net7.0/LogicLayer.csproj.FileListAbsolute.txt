@@ -1,0 +1,17 @@
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo04\swimmingclub\LogicLayer\bin\Debug\net7.0\LogicLayer.deps.json
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo04\swimmingclub\LogicLayer\bin\Debug\net7.0\LogicLayer.runtimeconfig.json
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo04\swimmingclub\LogicLayer\bin\Debug\net7.0\LogicLayer.dll
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo04\swimmingclub\LogicLayer\bin\Debug\net7.0\LogicLayer.pdb
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo04\swimmingclub\LogicLayer\bin\Debug\net7.0\Globals.dll
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo04\swimmingclub\LogicLayer\bin\Debug\net7.0\Globals.pdb
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo04\swimmingclub\LogicLayer\obj\Debug\net7.0\LogicLayer.csproj.AssemblyReference.cache
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo04\swimmingclub\LogicLayer\obj\Debug\net7.0\LogicLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo04\swimmingclub\LogicLayer\obj\Debug\net7.0\LogicLayer.AssemblyInfoInputs.cache
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo04\swimmingclub\LogicLayer\obj\Debug\net7.0\LogicLayer.AssemblyInfo.cs
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo04\swimmingclub\LogicLayer\obj\Debug\net7.0\LogicLayer.csproj.CoreCompileInputs.cache
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo04\swimmingclub\LogicLayer\obj\Debug\net7.0\LogicLayer.csproj.CopyComplete
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo04\swimmingclub\LogicLayer\obj\Debug\net7.0\LogicLayer.dll
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo04\swimmingclub\LogicLayer\obj\Debug\net7.0\refint\LogicLayer.dll
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo04\swimmingclub\LogicLayer\obj\Debug\net7.0\LogicLayer.pdb
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo04\swimmingclub\LogicLayer\obj\Debug\net7.0\LogicLayer.genruntimeconfig.cache
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo04\swimmingclub\LogicLayer\obj\Debug\net7.0\ref\LogicLayer.dll
