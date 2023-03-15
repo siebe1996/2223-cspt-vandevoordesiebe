@@ -20,10 +20,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Entities\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj" />
     <ProjectReference Include="..\Globals\Globals.csproj" />
     <ProjectReference Include="..\LogicLayer\LogicLayer.csproj" />

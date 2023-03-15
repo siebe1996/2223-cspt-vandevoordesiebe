@@ -14,7 +14,7 @@ namespace Globals.Entities
         [StringLength(50, MinimumLength = 2)]
         public string Description { get; set; }
 
-        //nnavigation props
+        //navigation props
         public virtual ICollection<MemberRole> MemberRoles { get; set; }
     }
 }

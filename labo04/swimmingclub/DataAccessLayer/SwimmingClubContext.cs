@@ -42,11 +42,40 @@ namespace DataAccessLayer
                 entity.HasKey(e => e.Id);
                 entity.HasIndex(e => new {e.FirstName, e.LastName})
                 .IsUnique();
+
+                // Each User can have many UserClaims
+                entity.HasMany(e => e.Claims)
+                    .WithOne()
+                    .HasForeignKey(uc => uc.UserId)
+                    .IsRequired();
+
+                // Each User can have many UserLogins
+                entity.HasMany(e => e.Logins)
+                    .WithOne()
+                    .HasForeignKey(ul => ul.UserId)
+                    .IsRequired();
+
+                // Each User can have many UserTokens
+                entity.HasMany(e => e.Tokens)
+                    .WithOne()
+                    .HasForeignKey(ut => ut.UserId)
+                    .IsRequired();
+
+                // Each User can have many entries in the UserRole join table
+                entity.HasMany(e => e.MemberRoles)
+                    .WithOne()
+                    .HasForeignKey(ur => ur.UserId)
+                    .IsRequired();
             });
 
             modelBuilder.Entity<Role>(entity =>
             {
                 entity.HasKey(e => e.Id);
+
+                entity.HasMany(e => e.MemberRoles)
+                .WithOne(e => e.Role)
+                .HasForeignKey(ur => ur.RoleId)
+                .IsRequired();
             });
 
             modelBuilder.Entity<MemberRole>(entity =>
@@ -70,11 +99,19 @@ namespace DataAccessLayer
             modelBuilder.Entity<Coach>(entity =>
             {
                 //entity.HasKey(e => e.Id);
+                entity.HasMany(e => e.Workouts)
+                .WithOne(e => e.Coach)
+                .HasForeignKey(e => e.Id)
+                .IsRequired();
             });
 
             modelBuilder.Entity<Swimmer>(entity =>
             {
                 //entity.HasKey(e => e.Id);
+                entity.HasMany(e => e.Results)
+                .WithOne(e => e.Swimmer)
+                .HasForeignKey(e => e.SwimmerId)
+                .IsRequired();
             });
 
             modelBuilder.Entity<SwimmingPool>(entity =>
@@ -82,6 +119,11 @@ namespace DataAccessLayer
                 entity.HasKey(e => e.Id);
                 entity.HasIndex(e => e.Name)
                 .IsUnique();
+
+                entity.HasMany(e => e.Workouts)
+                .WithOne(e => e.SwimmingPool)
+                .HasForeignKey(e => e.SwimmingPoolId)
+                .IsRequired();
             });
 
             modelBuilder.Entity<Workout>(entity =>
@@ -96,6 +138,11 @@ namespace DataAccessLayer
                 entity.HasOne(x => x.SwimmingPool)
                 .WithMany(x => x.Workouts)
                 .HasForeignKey(x => x.SwimmingPoolId)
+                .IsRequired();
+
+                entity.HasMany(e => e.Attendences)
+                .WithOne(e => e.Workout)
+                .HasForeignKey(e => e.WorkoutId)
                 .IsRequired();
             });
 
@@ -123,6 +170,11 @@ namespace DataAccessLayer
                 entity.HasOne(x => x.SwimmingPool)
                 .WithMany(x => x.Races)
                 .HasForeignKey(x => x.SwimmingPoolId)
+                .IsRequired();
+
+                entity.HasMany(e => e.Results)
+                .WithOne(e => e.Race)
+                .HasForeignKey(e => e.RaceId)
                 .IsRequired();
             });
 

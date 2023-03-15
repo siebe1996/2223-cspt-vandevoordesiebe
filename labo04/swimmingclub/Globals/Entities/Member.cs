@@ -31,6 +31,9 @@ namespace Globals.Entities
 
         //navigation props
         public virtual ICollection<MemberRole> MemberRoles { get; set; }
+        public virtual ICollection<IdentityUserClaim<Guid>> Claims { get; set; }
+        public virtual ICollection<IdentityUserLogin<Guid>> Logins { get; set; }
+        public virtual ICollection<IdentityUserToken<Guid>> Tokens { get; set; }
 
     }
 }
