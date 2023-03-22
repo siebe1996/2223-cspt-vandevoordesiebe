@@ -31,7 +31,7 @@ namespace Globals.Entities
         public int Duration { get; set; }
 
         //navigation props
-        public virtual ICollection<Attendence> Attendences { get; set; }
+        public virtual ICollection<Attendance> Attendences { get; set; }
         public virtual SwimmingPool SwimmingPool { get; set; }
         public virtual Coach Coach { get; set; }
     }

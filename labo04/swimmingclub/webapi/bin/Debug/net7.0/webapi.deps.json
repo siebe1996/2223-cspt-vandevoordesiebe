@@ -17,7 +17,8 @@
           "Microsoft.EntityFrameworkCore.Proxies": "7.0.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.3",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.3",
-          "Swashbuckle.AspNetCore": "6.4.0"
+          "Swashbuckle.AspNetCore": "6.4.0",
+          "models": "1.0.0"
         },
         "runtime": {
           "webapi.dll": {}
@@ -773,7 +774,8 @@
           "Microsoft.EntityFrameworkCore": "7.0.3",
           "Microsoft.EntityFrameworkCore.Proxies": "7.0.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.3",
-          "Swashbuckle.AspNetCore": "6.4.0"
+          "Swashbuckle.AspNetCore": "6.4.0",
+          "models": "1.0.0"
         },
         "runtime": {
           "DataAccessLayer.dll": {}
@@ -804,6 +806,14 @@
         },
         "runtime": {
           "LogicLayer.dll": {}
+        }
+      },
+      "models/1.0.0": {
+        "dependencies": {
+          "Globals": "1.0.0"
+        },
+        "runtime": {
+          "models.dll": {}
         }
       }
     }
@@ -1399,6 +1409,11 @@
       "sha512": ""
     },
     "LogicLayer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "models/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

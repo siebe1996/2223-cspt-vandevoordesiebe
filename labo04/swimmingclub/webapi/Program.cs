@@ -1,8 +1,8 @@
 
 using Globals.Entities;
 using DataAccessLayer;
-using Globals.Extensions;
 using Microsoft.EntityFrameworkCore;
+using DataAccessLayer.Extensions;
 
 namespace webapi
 {
@@ -21,7 +21,7 @@ namespace webapi
 
             builder.Services.AddDbContext<SwimmingClubContext>(options => options.UseLazyLoadingProxies().UseSqlServer(builder.Configuration.GetConnectionString("SwimmingClubContext")));
             builder.Services.AddIdentity<Member, Role>().AddEntityFrameworkStores<SwimmingClubContext>();
-            //builder.Services.AddPortalServices(builder.Configuration);
+            builder.Services.AddPortalServices(builder.Configuration);
 
             var app = builder.Build();
 

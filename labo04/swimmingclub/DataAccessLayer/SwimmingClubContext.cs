@@ -30,7 +30,7 @@ namespace DataAccessLayer
         public DbSet<Swimmer> Swimmers { get; set; }
         public DbSet<SwimmingPool> SwimmingPools { get; set; }
         public DbSet<Workout> Workouts { get; set; }
-        public DbSet<Attendence> Attendences { get; set; }
+        public DbSet<Attendance> Attendances { get; set; }
         public DbSet<Race> Races { get; set; }
         public DbSet<Result> Results { get; set; }
 
@@ -146,7 +146,7 @@ namespace DataAccessLayer
                 .IsRequired();
             });
 
-            modelBuilder.Entity<Attendence>(entity =>
+            modelBuilder.Entity<Attendance>(entity =>
             {
                 entity.HasKey(e => new { e.SwimmerId, e.WorkoutId });
 

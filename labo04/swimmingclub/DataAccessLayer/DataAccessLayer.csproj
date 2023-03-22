@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Globals\Globals.csproj" />
+    <ProjectReference Include="..\models\models.csproj" />
   </ItemGroup>
 
 </Project>

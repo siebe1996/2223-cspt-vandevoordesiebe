@@ -20,6 +20,10 @@ namespace Globals.Entities
 
         [Required]
         [StringLength(50, MinimumLength = 2)]
+        public string Street { get; set; }
+
+        [Required]
+        [StringLength(50, MinimumLength = 2)]
         public string City { get; set; }
 
         [Required]

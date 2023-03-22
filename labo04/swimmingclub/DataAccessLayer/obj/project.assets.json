@@ -1397,6 +1397,19 @@
         "runtime": {
           "bin/placeholder/Globals.dll": {}
         }
+      },
+      "models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Globals": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/models.dll": {}
+        }
       }
     }
   },
@@ -4223,6 +4236,11 @@
       "type": "project",
       "path": "../Globals/Globals.csproj",
       "msbuildProject": "../Globals/Globals.csproj"
+    },
+    "models/1.0.0": {
+      "type": "project",
+      "path": "../models/models.csproj",
+      "msbuildProject": "../models/models.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4234,7 +4252,8 @@
       "Microsoft.EntityFrameworkCore.Proxies >= 7.0.3",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.3",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.3",
-      "Swashbuckle.AspNetCore >= 6.4.0"
+      "Swashbuckle.AspNetCore >= 6.4.0",
+      "models >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -4271,6 +4290,9 @@
           "projectReferences": {
             "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\labo04\\swimmingclub\\Globals\\Globals.csproj": {
               "projectPath": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\labo04\\swimmingclub\\Globals\\Globals.csproj"
+            },
+            "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\labo04\\swimmingclub\\models\\models.csproj": {
+              "projectPath": "C:\\Users\\siebe\\Documents\\odisee\\2dejaar\\C# programming techniques\\2023\\oplossingen\\labo04\\swimmingclub\\models\\models.csproj"
             }
           }
         }

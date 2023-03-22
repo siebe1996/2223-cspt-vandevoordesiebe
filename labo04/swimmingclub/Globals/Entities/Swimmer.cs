@@ -16,7 +16,7 @@ namespace Globals.Entities
         public int FinaPoints { get; set; }
 
         //navigation props
-        public virtual ICollection<Attendence> Attendences { get; set; }
+        public virtual ICollection<Attendance> Attendences { get; set; }
         public virtual ICollection<Result> Results { get; set; }
     }
 }

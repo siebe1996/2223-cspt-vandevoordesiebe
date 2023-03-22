@@ -1,0 +1,15 @@
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo04\swimmingclub\models\bin\Debug\net7.0\models.deps.json
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo04\swimmingclub\models\bin\Debug\net7.0\models.dll
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo04\swimmingclub\models\bin\Debug\net7.0\models.pdb
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo04\swimmingclub\models\bin\Debug\net7.0\Globals.dll
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo04\swimmingclub\models\bin\Debug\net7.0\Globals.pdb
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo04\swimmingclub\models\obj\Debug\net7.0\models.csproj.AssemblyReference.cache
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo04\swimmingclub\models\obj\Debug\net7.0\models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo04\swimmingclub\models\obj\Debug\net7.0\models.AssemblyInfoInputs.cache
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo04\swimmingclub\models\obj\Debug\net7.0\models.AssemblyInfo.cs
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo04\swimmingclub\models\obj\Debug\net7.0\models.csproj.CoreCompileInputs.cache
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo04\swimmingclub\models\obj\Debug\net7.0\models.csproj.CopyComplete
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo04\swimmingclub\models\obj\Debug\net7.0\models.dll
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo04\swimmingclub\models\obj\Debug\net7.0\refint\models.dll
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo04\swimmingclub\models\obj\Debug\net7.0\models.pdb
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo04\swimmingclub\models\obj\Debug\net7.0\ref\models.dll

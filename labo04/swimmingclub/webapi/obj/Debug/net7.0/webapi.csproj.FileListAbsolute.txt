@@ -88,3 +88,5 @@ C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossing
 C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo04\swimmingclub\webapi\bin\Debug\net7.0\DataAccessLayer.pdb
 C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo04\swimmingclub\webapi\bin\Debug\net7.0\Globals.pdb
 C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo04\swimmingclub\webapi\bin\Debug\net7.0\LogicLayer.pdb
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo04\swimmingclub\webapi\bin\Debug\net7.0\models.dll
+C:\Users\siebe\Documents\odisee\2dejaar\C# programming techniques\2023\oplossingen\labo04\swimmingclub\webapi\bin\Debug\net7.0\models.pdb

@@ -25,7 +25,7 @@ namespace DataAccessLayer.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Globals.Entities.Attendence", b =>
+            modelBuilder.Entity("Globals.Entities.Attendance", b =>
                 {
                     b.Property<Guid>("SwimmerId")
                         .HasColumnType("uniqueidentifier");
@@ -45,7 +45,7 @@ namespace DataAccessLayer.Migrations
 
                     b.HasIndex("WorkoutId");
 
-                    b.ToTable("Attendences");
+                    b.ToTable("Attendances");
                 });
 
             modelBuilder.Entity("Globals.Entities.Member", b =>
@@ -267,6 +267,11 @@ namespace DataAccessLayer.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
+                    b.Property<string>("Street")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
                     b.Property<int>("ZipCode")
                         .HasColumnType("int");
 
@@ -416,7 +421,7 @@ namespace DataAccessLayer.Migrations
                     b.HasDiscriminator().HasValue("Swimmer");
                 });
 
-            modelBuilder.Entity("Globals.Entities.Attendence", b =>
+            modelBuilder.Entity("Globals.Entities.Attendance", b =>
                 {
                     b.HasOne("Globals.Entities.Swimmer", "Swimmer")
                         .WithMany("Attendences")

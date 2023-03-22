@@ -15,7 +15,8 @@
           "Microsoft.EntityFrameworkCore.Proxies": "7.0.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.3",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.3",
-          "Swashbuckle.AspNetCore": "6.4.0"
+          "Swashbuckle.AspNetCore": "6.4.0",
+          "models": "1.0.0"
         },
         "runtime": {
           "DataAccessLayer.dll": {}
@@ -775,6 +776,14 @@
         "runtime": {
           "Globals.dll": {}
         }
+      },
+      "models/1.0.0": {
+        "dependencies": {
+          "Globals": "1.0.0"
+        },
+        "runtime": {
+          "models.dll": {}
+        }
       }
     }
   },
@@ -1359,6 +1368,11 @@
       "hashPath": "system.windows.extensions.5.0.0.nupkg.sha512"
     },
     "Globals/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "models/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
