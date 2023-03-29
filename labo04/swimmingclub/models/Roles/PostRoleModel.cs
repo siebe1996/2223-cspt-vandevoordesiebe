@@ -8,5 +8,7 @@ namespace models.Roles
 {
     public class PostRoleModel : BaseRoleModel
     {
+        public string? NormalizedName { get; set; }
+        public string? ConcurrencyStamp { get; set; }
     }
 }

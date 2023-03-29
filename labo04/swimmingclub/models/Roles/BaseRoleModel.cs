@@ -8,10 +8,14 @@ using System.Threading.Tasks;
 
 namespace models.Roles
 {
-    public class BaseRoleModel : IdentityRole<Guid>
+    public class BaseRoleModel
     {
         [Required]
         [StringLength(50, MinimumLength = 2)]
         public string Description { get; set; }
+
+        [Required]
+        [StringLength(50, MinimumLength = 2)]
+        public string Name { get; set; }
     }
 }

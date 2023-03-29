@@ -33,6 +33,7 @@ namespace DataAccessLayer
         public DbSet<Attendance> Attendances { get; set; }
         public DbSet<Race> Races { get; set; }
         public DbSet<Result> Results { get; set; }
+        public DbSet<RefreshToken> RefreshTokens { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -80,11 +81,11 @@ namespace DataAccessLayer
 
             modelBuilder.Entity<MemberRole>(entity =>
             {
-                entity.HasKey(e => new { e.MemberId, e.RoleId });
+                entity.HasKey(e => new { e.UserId, e.RoleId });
 
                 entity.HasOne(x => x.Member)
                 .WithMany(x => x.MemberRoles)
-                .HasForeignKey(x => x.MemberId)
+                .HasForeignKey(x => x.UserId)
                 .IsRequired()
                 .OnDelete(DeleteBehavior.Restrict);
 
@@ -193,6 +194,14 @@ namespace DataAccessLayer
                 .HasForeignKey(x => x.RaceId)
                 .IsRequired()
                 .OnDelete(DeleteBehavior.Restrict);
+            });
+
+            modelBuilder.Entity<RefreshToken>(entity =>
+            {
+                entity.HasOne(x => x.Member)
+                .WithMany(x => x.RefreshTokens)
+                .HasForeignKey(x => x.UserId)
+                .IsRequired();
             });
         }
     }

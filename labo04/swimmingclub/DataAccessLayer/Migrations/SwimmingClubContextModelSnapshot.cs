@@ -37,7 +37,6 @@ namespace DataAccessLayer.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("Remark")
-                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
@@ -143,16 +142,13 @@ namespace DataAccessLayer.Migrations
 
             modelBuilder.Entity("Globals.Entities.MemberRole", b =>
                 {
-                    b.Property<Guid>("MemberId")
+                    b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("RoleId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("MemberId", "RoleId");
+                    b.HasKey("UserId", "RoleId");
 
                     b.HasIndex("RoleId");
 
@@ -188,6 +184,45 @@ namespace DataAccessLayer.Migrations
                     b.HasIndex("SwimmingPoolId");
 
                     b.ToTable("Races");
+                });
+
+            modelBuilder.Entity("Globals.Entities.RefreshToken", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedByIp")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Expires")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ReplacedByToken")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("Revoked")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("RevokedByIp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Token")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("RefreshTokens");
                 });
 
             modelBuilder.Entity("Globals.Entities.Result", b =>
@@ -442,15 +477,15 @@ namespace DataAccessLayer.Migrations
 
             modelBuilder.Entity("Globals.Entities.MemberRole", b =>
                 {
-                    b.HasOne("Globals.Entities.Member", "Member")
-                        .WithMany("MemberRoles")
-                        .HasForeignKey("MemberId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
                     b.HasOne("Globals.Entities.Role", "Role")
                         .WithMany("MemberRoles")
                         .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("Globals.Entities.Member", "Member")
+                        .WithMany("MemberRoles")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
@@ -468,6 +503,17 @@ namespace DataAccessLayer.Migrations
                         .IsRequired();
 
                     b.Navigation("SwimmingPool");
+                });
+
+            modelBuilder.Entity("Globals.Entities.RefreshToken", b =>
+                {
+                    b.HasOne("Globals.Entities.Member", "Member")
+                        .WithMany("RefreshTokens")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Member");
                 });
 
             modelBuilder.Entity("Globals.Entities.Result", b =>
@@ -551,6 +597,8 @@ namespace DataAccessLayer.Migrations
                     b.Navigation("Logins");
 
                     b.Navigation("MemberRoles");
+
+                    b.Navigation("RefreshTokens");
 
                     b.Navigation("Tokens");
                 });

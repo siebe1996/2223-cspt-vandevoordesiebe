@@ -1,11 +1,13 @@
 ﻿using DataAccessLayer.Repositories.interfaces;
 using Globals.Entities;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using models.Results;
 using models.SwimmingPools;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,10 +16,14 @@ namespace DataAccessLayer.Repositories
     public class SwimmingPoolRepository : ISwimmingPoolRepository
     {
         private readonly SwimmingClubContext _context;
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly ClaimsPrincipal _member;
 
-        public SwimmingPoolRepository(SwimmingClubContext context)
+        public SwimmingPoolRepository(SwimmingClubContext context, IHttpContextAccessor httpContextAccessor)
         {
             _context = context;
+            _httpContextAccessor = httpContextAccessor;
+            _member = _httpContextAccessor.HttpContext.User;
         }
 
         public async Task<List<GetSwimmingPoolModel>> GetSwimmingPools()

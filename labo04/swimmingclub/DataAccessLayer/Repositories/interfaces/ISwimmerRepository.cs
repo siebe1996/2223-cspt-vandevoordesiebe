@@ -12,5 +12,6 @@ namespace DataAccessLayer.Repositories.interfaces
         Task<List<GetSwimmerModel>> GetSwimmers();
         Task<GetSwimmerModel> GetSwimmer(Guid id);
         Task<GetSwimmerModel> PostSwimmer(PostSwimmerModel postSwimmerModel);
+        Task<GetSwimmerRolesModel> AddUserToRole(Guid id, PutSwimmerRolesModel putSwimmerRolesModel);
     }
 }

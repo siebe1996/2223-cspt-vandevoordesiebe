@@ -1,4 +1,6 @@
-﻿using DataAccessLayer.Repositories.interfaces;
+﻿using Globals.Helpers;
+using DataAccessLayer.Repositories.interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using models.Results;
@@ -6,6 +8,7 @@ using System.Runtime.InteropServices;
 
 namespace webapi.Controllers
 {
+    [Authorize(AuthenticationSchemes = "Bearer")]
     [Route("api/[controller]")]
     [ApiController]
     public class ResultsController : ControllerBase
@@ -21,8 +24,22 @@ namespace webapi.Controllers
         [Consumes("application/json")]
         public async Task<ActionResult<GetResultModel>> GetResults()
         {
-            List<GetResultModel> results = await _resultRepository.GetResults();
-            return results == null ? NotFound() : Ok(results);
+            try
+            {
+                List<GetResultModel> results = await _resultRepository.GetResults();
+                return results == null ? NotFound() : Ok(results);
+            }
+            catch (Exception ex)
+            {
+                if (ex is ForbiddenException) 
+                {
+                    return Forbid(ex.Message);
+                }
+                else
+                {
+                    return StatusCode(500);
+                }
+            }
         }
 
         [HttpGet("Search")]

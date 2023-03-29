@@ -1,5 +1,6 @@
 ﻿using DataAccessLayer.Repositories;
 using DataAccessLayer.Repositories.interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using models.Races;
@@ -7,6 +8,7 @@ using models.Workouts;
 
 namespace webapi.Controllers
 {
+    [Authorize(AuthenticationSchemes = "Bearer")]
     [Route("api/[controller]")]
     [ApiController]
     public class WorkoutsController : ControllerBase
@@ -32,6 +34,15 @@ namespace webapi.Controllers
         public async Task<ActionResult<GetWorkoutAbsenceModel>> GetWorkoutsAbsences()
         {
             List<GetWorkoutAbsenceModel> models = await _workoutRepository.GetWorkoutsAbsences();
+            return models == null ? NotFound() : Ok(models);
+        }
+
+        [HttpGet]
+        [Route("Attendance")]
+        [Consumes("application/json")]
+        public async Task<ActionResult<GetWorkoutAbsenceModel>> GetWorkoutsAttendance()
+        {
+            List<GetWorkoutAbsenceModel> models = await _workoutRepository.GetWorkoutsAttendance();
             return models == null ? NotFound() : Ok(models);
         }
 

@@ -1,5 +1,7 @@
 ﻿using DataAccessLayer.Repositories;
 using DataAccessLayer.Repositories.interfaces;
+using Globals.Helpers;
+using Globals.Interfaces;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -15,8 +17,8 @@ namespace DataAccessLayer.Extensions
         public static IServiceCollection AddPortalServices(this IServiceCollection services, IConfiguration config) 
         {
             services.AddScoped<IRoleRepository, RoleRepository>();
-            //services.AddScoped<IMemberRepository, MemberRepository>();
-            //services.AddScoped<IRoleMemberRepository, RoleMemberRepository>();
+            services.AddScoped<IMemberRepository, MemberRepository>();
+            services.AddScoped<IMemberRoleRepository, MemberRoleRepository>();
             services.AddScoped<ICoachRepository, CoachRepository>();
             services.AddScoped<ISwimmerRepository, SwimmerRepository>();
             services.AddScoped<ISwimmingPoolRepository, SwimmingPoolRepository>();
@@ -24,6 +26,7 @@ namespace DataAccessLayer.Extensions
             services.AddScoped<IAttendanceRepository, AttendanceRepository>();
             services.AddScoped<IRaceRepository, RaceRepository>();
             services.AddScoped<IResultRepository, ResultRepository>();
+            //services.AddScoped<IAppSettings, AppSettings>();
 
             return services;
         }

@@ -1,11 +1,13 @@
 ﻿using DataAccessLayer.Repositories.interfaces;
 using Globals.Entities;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using models.Roles;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,11 +16,15 @@ namespace DataAccessLayer.Repositories
     public class RoleRepository : IRoleRepository
     {
         private readonly SwimmingClubContext _context;
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly ClaimsPrincipal _member;
         private readonly RoleManager<Role> _roleManager;
 
-        public RoleRepository(SwimmingClubContext context, RoleManager<Role> roleManager)
+        public RoleRepository(SwimmingClubContext context, IHttpContextAccessor httpContextAccessor, RoleManager<Role> roleManager)
         {
             _context = context;
+            _httpContextAccessor = httpContextAccessor;
+            _member = _httpContextAccessor.HttpContext.User;
             _roleManager = roleManager;
         }
 
@@ -28,6 +34,7 @@ namespace DataAccessLayer.Repositories
             {
                 Id = x.Id,
                 Description = x.Description,
+                Name = x.Name
             }).AsNoTracking()
             .ToListAsync();
 
@@ -40,6 +47,7 @@ namespace DataAccessLayer.Repositories
             {
                 Id = x.Id,
                 Description = x.Description,
+                Name = x.Name
             }).AsNoTracking()
             .FirstOrDefaultAsync(x => x.Id == id);
 
@@ -50,6 +58,7 @@ namespace DataAccessLayer.Repositories
         {
             Role role = new Role
             {
+                Name = postRoleModel.Name,
                 Description = postRoleModel.Description,
             };
 
@@ -58,6 +67,7 @@ namespace DataAccessLayer.Repositories
             GetRoleModel roleModel = new GetRoleModel
             {
                 Id = role.Id,
+                Name = postRoleModel.Name,
                 Description = role.Description,
             };
 

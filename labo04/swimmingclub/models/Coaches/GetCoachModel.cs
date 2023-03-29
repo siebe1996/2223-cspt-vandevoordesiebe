@@ -11,5 +11,8 @@ namespace models.Coaches
     {
         [Required]
         public Guid Id { get; set; }
+
+        [Required]
+        public List<string> roles { get; set; }
     }
 }

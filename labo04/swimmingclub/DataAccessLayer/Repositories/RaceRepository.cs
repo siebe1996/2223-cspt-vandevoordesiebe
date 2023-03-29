@@ -1,11 +1,13 @@
 ﻿using DataAccessLayer.Repositories.interfaces;
 using Globals.Entities;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using models.Races;
 using models.Results;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,10 +16,14 @@ namespace DataAccessLayer.Repositories
     public class RaceRepository : IRaceRepository
     {
         private readonly SwimmingClubContext _context;
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly ClaimsPrincipal _member;
 
-        public RaceRepository(SwimmingClubContext context)
+        public RaceRepository(SwimmingClubContext context, IHttpContextAccessor httpContextAccessor)
         {
             _context = context;
+            _httpContextAccessor = httpContextAccessor;
+            _member = _httpContextAccessor.HttpContext.User;
         }
 
         public async Task<List<GetRaceModel>> GetRaces()

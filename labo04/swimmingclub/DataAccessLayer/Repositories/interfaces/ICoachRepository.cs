@@ -12,5 +12,6 @@ namespace DataAccessLayer.Repositories.interfaces
         Task<List<GetCoachModel>> GetCoaches();
         Task<GetCoachModel> GetCoach(Guid id);
         Task<GetCoachModel> PostCoach(PostCoachModel postCoachModel);
+        Task<GetCoachRolesModel> AddUserToRole(Guid id, PutCoachRolesModel putCoachRolesModel);
     }
 }

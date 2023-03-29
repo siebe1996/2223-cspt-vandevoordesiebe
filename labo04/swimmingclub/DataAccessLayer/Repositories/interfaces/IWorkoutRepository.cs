@@ -11,6 +11,7 @@ namespace DataAccessLayer.Repositories.interfaces
     {
         Task<List<GetWorkoutModel>> GetWorkouts();
         Task<List<GetWorkoutAbsenceModel>> GetWorkoutsAbsences();
+        Task<List<GetWorkoutAbsenceModel>> GetWorkoutsAttendance();
         Task<GetWorkoutModel> GetWorkout(Guid id);
         Task<GetWorkoutModel> PostWorkout(PostWorkoutModel postWorkoutModel);
     }

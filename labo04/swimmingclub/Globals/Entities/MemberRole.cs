@@ -10,12 +10,6 @@ namespace Globals.Entities
 {
     public class MemberRole : IdentityUserRole<Guid>
     {
-        [Required]
-        public Guid MemberId { get; set; }
-
-        [Required]
-        public Guid RoleId { get; set; }
-
         //navigation props
         public virtual Member Member { get; set; }
         public virtual Role Role { get; set; }

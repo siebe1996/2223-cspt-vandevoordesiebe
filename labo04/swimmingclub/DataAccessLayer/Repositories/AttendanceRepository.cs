@@ -1,10 +1,12 @@
 ﻿using DataAccessLayer.Repositories.interfaces;
 using Globals.Entities;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using models.Attendances;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,10 +15,14 @@ namespace DataAccessLayer.Repositories
     public class AttendanceRepository : IAttendanceRepository
     {
         private readonly SwimmingClubContext _context;
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly ClaimsPrincipal _member;
 
-        public AttendanceRepository(SwimmingClubContext context)
+        public AttendanceRepository(SwimmingClubContext context, IHttpContextAccessor httpContextAccessor)
         {
             _context = context;
+            _httpContextAccessor = httpContextAccessor;
+            _member = _httpContextAccessor.HttpContext.User;
         }
 
         public async Task<List<GetAttendanceModel>> GetAttendances()

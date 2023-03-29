@@ -1,10 +1,13 @@
 ﻿using DataAccessLayer.Repositories.interfaces;
 using Globals.Entities;
+using Globals.Helpers;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using models.Workouts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,10 +16,14 @@ namespace DataAccessLayer.Repositories
     public class WorkoutRepository : IWorkoutRepository
     {
         private readonly SwimmingClubContext _context;
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly ClaimsPrincipal _member;
 
-        public WorkoutRepository(SwimmingClubContext context)
+        public WorkoutRepository(SwimmingClubContext context, IHttpContextAccessor httpContextAccessor)
         {
             _context = context;
+            _httpContextAccessor = httpContextAccessor;
+            _member = _httpContextAccessor.HttpContext.User;
         }
 
         public async Task<List<GetWorkoutModel>> GetWorkouts()
@@ -47,6 +54,29 @@ namespace DataAccessLayer.Repositories
             .ToListAsync();
 
             return workoutsAbsences;
+        }
+
+        public async Task<List<GetWorkoutAbsenceModel>> GetWorkoutsAttendance()
+        {
+            var coachId = await _context.Workouts.Where(x => x.CoachId.ToString() == _member.Identity.Name).Select(x => x.CoachId).FirstOrDefaultAsync();
+            if (_member.Claims.Where(x => x.Type.Contains("role")).Count() == 1 &&
+                (_member.IsInRole("coach") || _member.IsInRole("swimmer")) &&
+                (coachId == null || coachId == Guid.Empty || coachId == new Guid()))
+            {
+                throw new ForbiddenException("Forbidden to get these results");
+            }
+            else
+            {
+                List<GetWorkoutAbsenceModel> workoutsAttendence = await _context.Workouts.Where(x => x.Schedule < DateTime.Now && x.CoachId == coachId)
+                    .Select(x => new GetWorkoutAbsenceModel
+                    {
+                        Schedulde = x.Schedule,
+                        CoachFullName = $"{x.Coach.FirstName} {x.Coach.LastName}",
+                        SwimmerNames = x.Attendences.Where(x => x.Present == true).Select(x => $"{x.Swimmer.FirstName} {x.Swimmer.LastName}").ToList(),
+                    }).Where(x => x.SwimmerNames.Any()).AsNoTracking()
+                .ToListAsync();
+                return workoutsAttendence;
+            }
         }
 
         public async Task<GetWorkoutModel> GetWorkout(Guid id)
