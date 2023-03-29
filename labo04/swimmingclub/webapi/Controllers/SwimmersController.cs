@@ -39,7 +39,7 @@ namespace webapi.Controllers
         [Consumes("application/json")]
         public async Task<ActionResult<GetSwimmerModel>> GetSwimmerResults(Guid id)
         {
-            var model = await _swimmerRepository.GetSwimmer(id);
+            var model = await _swimmerRepository.GetSwimmerResults(id);
             return model == null ? NotFound() : Ok(model);
         }
 
